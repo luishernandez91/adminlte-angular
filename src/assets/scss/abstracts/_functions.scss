@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+/*
+ *  To access the color values
+ */
+@function aw-color($palettes, $color) {
+  @if map-has-key($palettes, $color) {
+    @return map-get($palettes, $color);
+  }
+
+  @warn "unknown color `#{$color}` in palette";
+
+  @return null;
+}
+
+/*
+ * Function to convert Pixels to REM.
+ */
+@function pixelstorem($size) {
+  $remSize: $size / $base-size;
+
+  @return #{$remSize}rem;
+}

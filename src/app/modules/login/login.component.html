@@ -1,1 +1,51 @@
-<p>login works!</p>
+<div class="login-container"
+     [style.background]="'url(assets/img/grownomics-home-cover-desktop@2x.d4ba04d0.jpg)'">
+  <div class="login-wrapper animate__animated animate__fadeInRight">
+
+    <img src="./assets/img/Logo-Grownomics@2x.383305b7.png"
+         class="logo" alt="">
+
+    <div class="w-100 mb-3">
+      <h4 class="text-gray">Inicio de sesión</h4>
+    </div>
+
+    <form [formGroup]="form" class="w-100 form-login" autocomplete="off">
+      <div class="form-group mb-4 w-100">
+        <input type="email"
+               placeholder="Usuario / Email"
+               class="form-control"
+               formControlName="key"
+               [ngClass]="{'is-invalid': form.get('key').invalid && form.get('key').touched, 'is-valid': form.get('key').valid}"
+               aria-describedby="User email">
+        <div class="invalid-feedback">
+          Campo requerido
+        </div>
+      </div>
+      <div class="form-group mb-4 w-100">
+        <input type="password"
+               placeholder="Password"
+               class="form-control"
+               formControlName="password"
+               [ngClass]="{'is-invalid': form.get('password').invalid && form.get('password').touched, 'is-valid': form.get('password').valid}"
+               aria-describedby="User password">
+        <div class="invalid-feedback">
+          Campo requerido
+        </div>
+      </div>
+
+      <button type="submit"
+              class="btn btn-block btn-flat btn-primary"
+              (click)="login()"
+              *ngIf="!loading"
+              [disabled]="form.invalid">
+        Entrar
+      </button>
+      <div class="lds-ellipsis" *ngIf="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </form>
+  </div>
+</div>

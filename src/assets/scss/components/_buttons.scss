@@ -1,0 +1,74 @@
+.aw-btn {
+  @extend .align-center;
+  letter-spacing: .5px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 0.25rem;
+  text-decoration: none !important;
+  cursor: pointer;
+  background-color: #fff;
+  color: #19cec5 !important;
+  border: 1px solid #19cec5;
+  -webkit-transition: background-image 0.2s ease-in-out;
+  -webkit-background-size: 200% auto;
+  background-size: 200% auto;
+  transition: background 1s ease-in;
+  height: 41px;
+  padding: 0 16px;
+
+  &.-md {
+    height: 42px;
+    padding: 0 32px;
+  }
+
+  &.-lg {
+    height: 46px;
+    padding: 0 24px;
+  }
+
+  &.-xl {
+    height: 55px;
+    padding: 0 64px;
+  }
+
+  &.-disabled {
+    @extend .btn-disabled;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @extend .btn-disabled;
+    }
+  }
+
+  &:hover {
+    color: #fff !important;
+    border: 1px solid aw-color($palette, aqua);
+    background-image: linear-gradient(to right, #00c6d6 0%, #31d7b6 51%, #00c6d6 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+  }
+
+  &:focus,
+  &:active {
+    background-position: right center;
+    border: 1px solid aw-color($palette, aqua);
+    outline: none;
+  }
+}
+
+.btn-disabled {
+  cursor: not-allowed;
+  color: aw-color($palette, dark-gray) !important;
+  border: none;
+  background: aw-color($palette, gray) none;
+}
+
+.align-center {
+  width: fit-content;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide scss variables.
+// -----------------------------------------------------------------------------
+
+// Colors
+$palette: (
+  aqua: #00c6d6,
+  dark-blue: #1e436c,
+  black: #414141,
+  gray: #E5E5E5,
+  dark-gray: #95989a,
+  aqua-deg-right: linear-gradient(to right, #31d7b6 0%, #00c6d6 82%, #00c6d6 100%),
+  aqua-deg-bottom:linear-gradient(to bottom, #31d7b6 0%, #00c6d6 82%, #00c6d6 100%)
+);
+
+$base-size: 16px;
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1200px,
+  xl: 1920px,
+);
+
+$wide-screens-breakpoints: (
+  sm: 1200px,
+  md: 1440px,
+  lg: 1920px,
+);
+
+$wide-screens-white-space: (
+  sm: 600px,
+  md: 730px,
+  lg: 920px,
+);
+
+// Container
+$container-max-width: 1600px;
+
+// Image path in assets
+$image-path: '/assets/img/';
